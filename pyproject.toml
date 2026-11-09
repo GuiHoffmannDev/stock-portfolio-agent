@@ -1,0 +1,21 @@
+[project]
+name = "stock-portfolio-agent"
+version = "0.1.0"
+description = "AI agent that streams a stock portfolio analysis workflow over the AG-UI protocol"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "ag-ui-protocol",
+    "crewai",
+    "fastapi",
+    "pandas",
+    "python-dotenv",
+    "uvicorn",
+    "yfinance",
+]
+
+[dependency-groups]
+dev = ["httpx", "pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["agent"]
+testpaths = ["agent"]

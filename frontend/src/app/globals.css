@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --surface: #0a0a0a;
+  --panel: #101010;
+  --rule: #2a2a2a;
+  --ink: #e8e6e1;
+  --ink-dim: #8f8d88;
+  --accent: #ff8a1f;
+  --cyan: #35c8e6;
+  --up: #2fbf71;
+  --down: #f0524f;
+  --tile-up: #0e5a34;
+  --tile-down: #7d1f1f;
+  --series: #3987e5;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-rule: var(--rule);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-accent: var(--accent);
+  --color-cyan: var(--cyan);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-tile-up: var(--tile-up);
+  --color-tile-down: var(--tile-down);
+  --color-series: var(--series);
+  --font-mono: var(--font-plex);
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-plex), ui-monospace, monospace;
+}
+
+/* Match the CopilotKit chat to the terminal surface and accent. */
+html.dark [data-copilotkit] {
+  --background: var(--surface);
+  --card: var(--panel);
+  --border: var(--rule);
+  --primary: var(--accent);
+  --primary-foreground: #0a0a0a;
+  --ring: var(--accent);
+  font-family: inherit;
+}
